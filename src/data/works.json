@@ -5,8 +5,8 @@
     "desc": "A flexible design system that supercharge designers working in multi-projects, fast-paced environment",
     "owner": "Amazon Web Services",
     "category": "works",
-    "background": "#FF579D",
-    "foreground": "#09090b",
+    "background": "#3248AF",
+    "foreground": "#FFFFFF",
     "thumbnailClassName": "-rotate-2 hover:rotate-2",
     "tags": [
       "design",
@@ -33,7 +33,7 @@
     "category": "works",
     "background": "#FBD238",
     "foreground": "#09090b",
-    "thumbnailClassName": "-rotate-2 hover:rotate-2",
+    "thumbnailClassName": "-translate-y-4 scale-120 -rotate-2 hover:rotate-2 hover:scale-130",
     "tags": [
       "design",
       "UI",
@@ -58,7 +58,7 @@
     "category": "works",
     "background": "#615AF0",
     "foreground": "#FFFFFF",
-    "thumbnailClassName": "-rotate-2 hover:rotate-2",
+    "thumbnailClassName": "-translate-y-4 -rotate-2 hover:rotate-2",
     "tags": [
       "Design",
       "UI",
