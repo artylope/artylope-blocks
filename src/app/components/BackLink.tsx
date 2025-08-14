@@ -10,7 +10,7 @@ const BackLink = ({ link, label }: BackLinkProps) => {
   return (
     <Link
       href={link}
-      className="-ml-2 inline-flex items-center mb-4 transition-colors content-default  tracking-tighter text-2xl">
+      className="-ml-2 inline-flex items-center mb-4 transition-colors content-default  tracking-tighter text-xl">
       <ChevronLeft size={24} />
       {label}
     </Link>

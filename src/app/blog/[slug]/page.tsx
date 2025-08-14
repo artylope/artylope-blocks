@@ -21,7 +21,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <>
       <Header />
       <div className="container">
-        <BackLink link="/blog" label="Back to Blog" />
+        <BackLink link="/blog" label="Back" />
 
 
         <article className="max-w-xl mx-auto lg:py-16 py-8 lg:space-y-8 space-y-4">
