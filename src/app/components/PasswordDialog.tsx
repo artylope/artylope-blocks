@@ -31,7 +31,7 @@ const PasswordDialog = ({ workTitle, onSuccess }: PasswordDialogProps) => {
     usePasswordProtect();
   const router = useRouter();
   const { addToast } = useToast();
-  
+
   // Get the actual work data from pendingWorkSlug
   const currentWork = pendingWorkSlug ? getValidatedWork(pendingWorkSlug) : null;
   const actualWorkTitle = currentWork?.title || workTitle;
@@ -65,15 +65,15 @@ const PasswordDialog = ({ workTitle, onSuccess }: PasswordDialogProps) => {
           unlock();
           setShowPasswordDialog(false);
           setPassword('');
-          
+
           // Show success toast with correct work title
           addToast(
             `${actualWorkTitle} is now unlocked, you can also access all works that are protected.`,
             'success'
           );
-          
+
           onSuccess();
-          
+
           // Redirect to the pending work if it exists
           if (pendingWorkSlug) {
             router.push(`/works/${pendingWorkSlug}`);
@@ -107,7 +107,7 @@ const PasswordDialog = ({ workTitle, onSuccess }: PasswordDialogProps) => {
   if (!showPasswordDialog) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/20 backdrop-blur-xs flex items-center justify-center z-50">
       <div className="bg-background border rounded-lg p-6 max-w-md w-full mx-4 shadow-lg">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
