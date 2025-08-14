@@ -64,9 +64,9 @@ const WorkCard = ({ work }: WorkCardProps) => {
       style={{ backgroundColor: work.background }}>
 
       {/* Title in top left */}
-      <div className="absolute top-4 left-4 z-10">
+      <div className="absolute top-6 z-10 w-full">
         <h3
-          className="text-2xl font-semibold tracking-tight"
+          className="text-center text-2xl font-semibold tracking-tight font-heading"
           style={{ color: work.foreground }}>
           {work.title}
         </h3>
@@ -104,11 +104,8 @@ const WorkCard = ({ work }: WorkCardProps) => {
         </div>
       )}
       {isProtected && work.published && (
-        <div className="absolute top-2 right-2">
-          <Badge variant="destructive" className="gap-1">
-            <Lock size={12} />
-            Requires Password
-          </Badge>
+        <div className="absolute top-6 right-6">
+          <Lock size={20} className="text-foreground opacity-50" />
         </div>
       )}
     </div>

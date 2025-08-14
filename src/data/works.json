@@ -31,9 +31,9 @@
     "desc": "Disputes will occur eventually to any merchant doing business online. How might we make the disputes journey less stressful and less complex?",
     "owner": "Stripe",
     "category": "works",
-    "background": "#FBD238",
+    "background": "F2F3F5",
     "foreground": "#09090b",
-    "thumbnailClassName": "-translate-y-4 scale-120 -rotate-2 hover:rotate-2 hover:scale-130",
+    "thumbnailClassName": "-translate-y-8 -rotate-2 hover:rotate-2 ",
     "tags": [
       "design",
       "UI",
@@ -58,7 +58,7 @@
     "category": "works",
     "background": "#615AF0",
     "foreground": "#FFFFFF",
-    "thumbnailClassName": "-translate-y-4 -rotate-2 hover:rotate-2",
+    "thumbnailClassName": "translate-y-2 -rotate-2 hover:rotate-2",
     "tags": [
       "Design",
       "UI",
@@ -80,7 +80,7 @@
     "title": "Audioscope",
     "desc": "An AI/ML speech to text prototype that transcribes radio clips to monitor and improve overall communication and safety at work sites.",
     "owner": "Amazon Web Services",
-    "background": "#FF9900",
+    "background": "#F2F3F5",
     "foreground": "#09090b",
     "thumbnailClassName": "-rotate-2 hover:rotate-2",
     "tags": [
@@ -106,7 +106,7 @@
     "title": "RedeemSG",
     "desc": "Singapore's digital vouchers system designed to create, manage and track voucher redemptions easily.",
     "owner": "Open Government Products, GovTech",
-    "background": "#FF9900",
+    "background": "#F2F3F5",
     "foreground": "#09090b",
     "thumbnailClassName": "-rotate-2 hover:rotate-2",
     "tags": [
@@ -132,7 +132,7 @@
     "title": "Vaccine Ops",
     "desc": "An inclusive appointment booking and certificate system for Covid-19 vaccination in Singapore.",
     "owner": "Open Government Products, GovTech",
-    "background": "#BDFBD7",
+    "background": "#F2F3F5",
     "foreground": "#09090b",
     "thumbnailClassName": "-rotate-2 hover:rotate-2",
     "tags": [
@@ -157,7 +157,7 @@
     "title": "Antigen Rapid Testing",
     "desc": "A scalable Covid-19 Antigen Rapid Testing system deployed to do pre-event testing at large gathering.",
     "owner": "Open Government Products, GovTech",
-    "background": "#FF9900",
+    "background": "#F2F3F5",
     "foreground": "#09090b",
     "tags": [
       "design",
@@ -180,7 +180,7 @@
     "title": "Pay.gov.sg",
     "desc": "Make payments to government fast, easy and error-free. Empower government agencies to set up user-friendly payment services in minutes",
     "owner": "Open Government Products, GovTech",
-    "background": "#FF9900",
+    "background": "#BDFFDE",
     "foreground": "#09090b",
     "thumbnailClassName": "-rotate-2 hover:rotate-2",
     "tags": [
@@ -206,7 +206,7 @@
     "title": "Vault",
     "desc": "A secure and centralised data repository for the public officers within the government to request data for policy making",
     "owner": "Open Government Products, GovTech",
-    "background": "#FF9900",
+    "background": "#F2F3F5",
     "foreground": "#09090b",
     "thumbnailClassName": "-rotate-2 hover:rotate-2",
     "tags": [
@@ -231,7 +231,7 @@
     "title": "Parking.sg",
     "desc": "A mobile app that allows motorists in Singapore pay for parking charges at all coupon-based public car parks",
     "owner": "GovTech Singapore",
-    "background": "#81E6F3",
+    "background": "#F2F3F5",
     "foreground": "#09090b",
     "thumbnailClassName": "-rotate-2 hover:rotate-2",
     "tags": [
