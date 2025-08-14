@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Lock, Clock } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import { getAllWorks } from '@/lib/works';
 import { type Work } from '@/lib/schemas';
 import PasswordDialog from '@/app/components/PasswordDialog';
@@ -55,10 +56,16 @@ const WorkCard = ({ work }: WorkCardProps) => {
   };
 
   const cardContent = (
-    <div
+    <motion.div
+      layoutId={`work-background-${work.slug}`}
+      layout
       className={`overflow-hidden transition-all hover:shadow-lg h-full relative group ${isUnpublished ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
         } work-card work-card-${work.slug}`}
-      style={{ backgroundColor: work.background }}>
+      style={{ backgroundColor: work.background }}
+      transition={{ 
+        layout: { duration: 0.3, ease: "easeOut" },
+        default: { duration: 0.3, ease: "easeOut" }
+      }}>
 
       {/* Title in top left */}
       <div className="absolute top-6 z-10 w-full">
@@ -105,7 +112,7 @@ const WorkCard = ({ work }: WorkCardProps) => {
           <Lock size={20} className="text-foreground opacity-50" />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 
   if (isUnpublished) {

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import BackLink from './BackLink';
 import PageTitle from './PageTitle';
 import PasswordDialog from './PasswordDialog';
@@ -59,22 +60,40 @@ const WorkTemplate = ({ slug, children }: WorkTemplateProps) => {
     <>
       <Header />
       <div className="container mx-auto grow">
-        <BackLink link="/works" label="Back to all works" />
+        <BackLink link="/works" label="Back" />
         <PageTitle title={work.title} />
-        <div className="w-full">
+      </div>
+
+      {/* Full-width color block outside container */}
+      <motion.div
+        layoutId={`work-background-${work.slug}`}
+        layout
+        className="w-screen h-[75vh] flex items-center justify-center relative -mx-[50vw] left-1/2"
+        style={{ backgroundColor: work.background }}
+        initial={false}
+        transition={{
+          layout: { duration: 0.3, ease: "easeOut" },
+          default: { duration: 0.3, ease: "easeOut" }
+        }}
+      >
+        <div className="container mx-auto flex items-center justify-center h-full">
           {coverImage ? (
             <Image
               width={800}
               height={200}
               src={coverImage}
               alt={`${work.title} cover image`}
+              className="object-contain max-w-full max-h-full"
             />
           ) : (
-            <div className="flex justify-center items-center w-full h-48 bg-zinc-200">
-              <span className="text-zinc-500">Loading cover image...</span>
+            <div className="flex justify-center items-center w-full h-48">
+              <span style={{ color: work.foreground }}>Loading cover image...</span>
             </div>
           )}
         </div>
+      </motion.div>
+
+      <div className="container mx-auto grow">
         <div className="work-details">
           <h1>{work.title}</h1>
           <p>{work.desc}</p>

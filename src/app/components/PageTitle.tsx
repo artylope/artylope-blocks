@@ -4,7 +4,7 @@ interface PageTitleProps {
 
 const PageTitle = ({ title }: PageTitleProps) => {
   return (
-    <h1 className="text-3xl font-bold mb-6">{title}</h1>
+    <h1 className="text-5xl font-bold mb-6 font-heading tracking-tighter">{title}</h1>
   );
 };
 
