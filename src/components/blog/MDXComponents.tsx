@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import atomOneDark from 'react-syntax-highlighter/dist/styles/atom-one-dark';
-import atomOneLight from 'react-syntax-highlighter/dist/styles/atom-one-light';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+// @ts-expect-error - react-syntax-highlighter types don't include individual style imports
+import { atomOneDark, atomOneLight } from 'react-syntax-highlighter/dist/styles';
 import { useTheme } from 'next-themes';
 
 interface CodeProps {
@@ -14,7 +14,7 @@ interface CodeProps {
 function CodeBlock({ children, className }: CodeProps) {
   const { theme } = useTheme();
   const language = className?.replace('language-', '') || 'text';
-  
+
   return (
     <SyntaxHighlighter
       language={language}
@@ -98,7 +98,7 @@ export const MDXComponents = {
     if (!className) {
       return <InlineCode {...props}>{children}</InlineCode>;
     }
-    
+
     // This is a code block with language specification
     return <CodeBlock className={className}>{children}</CodeBlock>;
   },
@@ -114,7 +114,7 @@ export const MDXComponents = {
         </div>
       );
     }
-    
+
     // Fallback for other pre content
     return (
       <div className="my-6">

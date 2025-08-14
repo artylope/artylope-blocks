@@ -137,14 +137,18 @@ const TestimonialSection = () => {
             <div className="flex gap-2">
               <button
                 onClick={scrollPrev}
-                className="p-2 rounded-full border surface-base hover:surface-backdrop transition-all"
+                disabled={!canScrollPrev}
+                className={`p-2 rounded-full border surface-base transition-all ${canScrollPrev ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
+                  }`}
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={scrollNext}
-                className="p-2 rounded-full border surface-base hover:surface-backdrop transition-all"
+                disabled={!canScrollNext}
+                className={`p-2 rounded-full border surface-base transition-all ${canScrollNext ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
+                  }`}
                 aria-label="Next testimonial"
               >
                 <ChevronRight size={20} />
@@ -157,14 +161,20 @@ const TestimonialSection = () => {
             <div className="flex gap-2">
               <button
                 onClick={scrollPrev}
-                className="p-2 rounded-full border surface-base hover:surface-backdrop transition-all"
+                disabled={!canScrollPrev}
+                className={`p-2 rounded-full border surface-base transition-all ${
+                  canScrollPrev ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
+                }`}
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={scrollNext}
-                className="p-2 rounded-full border surface-base hover:surface-backdrop transition-all"
+                disabled={!canScrollNext}
+                className={`p-2 rounded-full border surface-base transition-all ${
+                  canScrollNext ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
+                }`}
                 aria-label="Next testimonial"
               >
                 <ChevronRight size={20} />
@@ -187,10 +197,10 @@ const TestimonialSection = () => {
                     className="flex-[0_0_100%] md:flex-[0_0_40%] px-2 md:px-4 flex items-center"
                   >
                     <div className={`transition-all duration-500 ease-out w-full ${isActive
-                        ? 'md:scale-105 md:opacity-100 md:z-20 relative'
-                        : isVisible
-                          ? 'md:scale-90 md:opacity-60 md:z-10'
-                          : 'md:scale-80 md:opacity-30'
+                      ? 'md:scale-105 md:opacity-100 md:z-20 relative'
+                      : isVisible
+                        ? 'md:scale-90 md:opacity-60 md:z-10'
+                        : 'md:scale-80 md:opacity-30'
                       }`}>
                       <TestimonialCard testimonial={testimonial} />
                     </div>
@@ -207,8 +217,8 @@ const TestimonialSection = () => {
                 key={index}
                 onClick={() => scrollTo(index)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex
-                    ? 'bg-primary-500 w-10'
-                    : 'bg-zinc-300 dark:bg-zinc-600 hover:bg-primary-400 dark:hover:bg-primary-400 w-6'
+                  ? 'bg-primary-500 w-10'
+                  : 'bg-zinc-300 dark:bg-zinc-600 hover:bg-primary-400 dark:hover:bg-primary-400 w-6'
                   }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
