@@ -162,9 +162,8 @@ const TestimonialSection = () => {
               <button
                 onClick={scrollPrev}
                 disabled={!canScrollPrev}
-                className={`p-2 rounded-full border surface-base transition-all ${
-                  canScrollPrev ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
-                }`}
+                className={`p-2 rounded-full border surface-base transition-all ${canScrollPrev ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
+                  }`}
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft size={20} />
@@ -172,9 +171,8 @@ const TestimonialSection = () => {
               <button
                 onClick={scrollNext}
                 disabled={!canScrollNext}
-                className={`p-2 rounded-full border surface-base transition-all ${
-                  canScrollNext ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
-                }`}
+                className={`p-2 rounded-full border surface-base transition-all ${canScrollNext ? 'hover:surface-backdrop' : 'opacity-50 cursor-not-allowed'
+                  }`}
                 aria-label="Next testimonial"
               >
                 <ChevronRight size={20} />
