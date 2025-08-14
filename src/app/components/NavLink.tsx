@@ -19,7 +19,7 @@ export default function NavLink({
     <Link
       href={href}
       onClick={onClick}
-      className={`transition-colors duration-200 group tracking-[1px] font-bold uppercase ${className}`}>
+      className={`transition-colors duration-200 group tracking-[1px] font-bold font-heading uppercase ${className}`}>
       <span
         className={
           isActive

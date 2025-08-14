@@ -7,7 +7,6 @@ import BackLink from './BackLink';
 import PageTitle from './PageTitle';
 import PasswordDialog from './PasswordDialog';
 import { usePasswordProtect } from './PasswordProtectContext';
-import { useToast } from './Toast';
 import { getValidatedWorks, getValidatedWork } from '@/lib/works';
 
 import Header from '@/app/components/Header';
@@ -20,8 +19,7 @@ interface WorkTemplateProps {
 
 const WorkTemplate = ({ slug, children }: WorkTemplateProps) => {
   const [coverImage, setCoverImage] = useState<string | null>(null);
-  const { isUnlocked, setShowPasswordDialog, setPendingWorkSlug, pendingWorkSlug } = usePasswordProtect();
-  const { addToast } = useToast();
+  const { isUnlocked, setShowPasswordDialog, setPendingWorkSlug } = usePasswordProtect();
 
   const work = getValidatedWork(slug);
   const allWorks = getValidatedWorks();

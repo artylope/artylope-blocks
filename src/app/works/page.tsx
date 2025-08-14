@@ -9,8 +9,6 @@ import { getAllWorks } from '@/lib/works';
 import { type Work } from '@/lib/schemas';
 import PasswordDialog from '@/app/components/PasswordDialog';
 import { usePasswordProtect } from '@/app/components/PasswordProtectContext';
-import { useToast } from '@/app/components/Toast';
-import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 import Header from '@/app/components/Header';
@@ -26,7 +24,6 @@ const WorkCard = ({ work }: WorkCardProps) => {
   const [thumbnailImage, setThumbnailImage] = useState<string | null>(null);
   const { isUnlocked, setShowPasswordDialog, setPendingWorkSlug } =
     usePasswordProtect();
-  const { addToast } = useToast();
   const router = useRouter();
 
   useEffect(() => {
@@ -143,8 +140,8 @@ export default function Works() {
   return (
     <>
       <Header />
-      <div className="container py-8 mx-auto">
-        <h1 className="mb-8 text-6xl font-heading">Works</h1>
+      <div className="container py-10 mx-auto">
+        <h1 className="mb-10 text-6xl font-heading">Works</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-xl overflow-hidden">
           {sortedWorks.map((work) => (

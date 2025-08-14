@@ -16,7 +16,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative">
+    <header className="relative ">
       <div className="container flex justify-between items-center py-6">
         {/* Logo */}
         <Logo />
@@ -43,21 +43,18 @@ export default function Header() {
             aria-label="Toggle menu">
             <div className="flex relative flex-col justify-between w-5 h-4">
               <span
-                className={`absolute w-5 h-[2px] bg-zinc-900 rounded-full transition-all duration-300 ease-in-out origin-center ${
-                  isMenuOpen ? 'top-1/2 rotate-45 -translate-y-1/2' : 'top-0'
-                }`}
+                className={`absolute w-5 h-[2px] bg-zinc-900 rounded-full transition-all duration-300 ease-in-out origin-center ${isMenuOpen ? 'top-1/2 rotate-45 -translate-y-1/2' : 'top-0'
+                  }`}
               />
               <span
-                className={`absolute w-5 h-[2px] bg-zinc-900 rounded-full transition-all duration-300 ease-in-out ${
-                  isMenuOpen ? 'opacity-0' : 'top-1/2 -translate-y-1/2'
-                }`}
+                className={`absolute w-5 h-[2px] bg-zinc-900 rounded-full transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-0' : 'top-1/2 -translate-y-1/2'
+                  }`}
               />
               <span
-                className={`absolute w-5 h-[2px] bg-zinc-900 rounded-full transition-all duration-300 ease-in-out origin-center ${
-                  isMenuOpen
-                    ? 'top-1/2 -rotate-45 -translate-y-1/2'
-                    : 'bottom-0'
-                }`}
+                className={`absolute w-5 h-[2px] bg-zinc-900 rounded-full transition-all duration-300 ease-in-out origin-center ${isMenuOpen
+                  ? 'top-1/2 -rotate-45 -translate-y-1/2'
+                  : 'bottom-0'
+                  }`}
               />
             </div>
           </button>
@@ -66,9 +63,8 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 bg-white z-40 lg:hidden transition-all duration-300 ${
-          isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
-        }`}>
+        className={`fixed inset-0 bg-white z-40 lg:hidden transition-all duration-300 ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
+          }`}>
         <nav className="flex flex-col justify-center items-center -mt-12 space-y-12 h-full">
           <ul className="flex flex-col gap-8 items-center text-center">
             {navItems.map((item) => (
