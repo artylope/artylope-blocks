@@ -14,9 +14,9 @@ interface Testimonial {
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
-    <div className="p-6 rounded-lg border surface-base">
-      <div className="mb-4">
-        <p className="content-default leading-relaxed italic">
+    <div className="lg:p-8 p-4 rounded-lg border surface-base">
+      <div className="mb-6">
+        <p className="content-default leading-[1.75em]">
           &quot;{testimonial.content}&quot;
         </p>
       </div>
@@ -131,7 +131,7 @@ const TestimonialSection = () => {
           </h2>
         </div>
 
-        <div className="relative w-full mx-auto md:px-16 lg:px-24">
+        <div className="relative w-full mx-auto md:px-8 lg:px-12">
           {/* Mobile Navigation buttons (left aligned) */}
           <div className="flex md:hidden justify-start items-center mb-6 px-4">
             <div className="flex gap-2">
@@ -181,7 +181,7 @@ const TestimonialSection = () => {
           </div>
 
           {/* Embla Carousel */}
-          <div className="overflow-hidden" ref={emblaRef}>
+          <div className="overflow-visible" ref={emblaRef}>
             <div className="flex md:items-center">
               {testimonials.map((testimonial, index) => {
                 const isActive = selectedIndex === index;
@@ -215,8 +215,8 @@ const TestimonialSection = () => {
                 key={index}
                 onClick={() => scrollTo(index)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex
-                  ? 'bg-primary0 w-10'
-                  : 'bg-zinc-300 dark:bg-zinc-600 hover:bg-primary-400 dark:hover:bg-primary-400 w-6'
+                  ? 'bg-primary w-10'
+                  : 'bg-zinc-300 dark:bg-zinc-600 hover:bg-primary-600 dark:hover:bg-primary-300 w-6'
                   }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

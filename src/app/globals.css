@@ -353,6 +353,7 @@
   }
 
   .dark {
+
     .content-strong {
       @apply text-white;
     }
@@ -362,7 +363,7 @@
     }
 
     .content-primary {
-      @apply text-primary-800;
+      @apply text-primary-300;
     }
 
     .surface-base {
