@@ -49,7 +49,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="flex justify-center items-center h-full lg:col-span-4 lg:col-start-9 lg:justify-start">
-        <button className="px-4 py-2 font-semibold text-white rounded bg-primary-500">
+        <button className="px-4 py-2 font-semibold text-white rounded bg-primary">
           Download Resume
         </button>
       </div>

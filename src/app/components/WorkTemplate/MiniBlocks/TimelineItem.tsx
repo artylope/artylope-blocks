@@ -10,7 +10,7 @@ const TimelineItem = ({ phase, title, description, duration, isLast = false }: T
   return (
     <div className="flex items-start gap-4 pb-8">
       <div className="flex-shrink-0 flex flex-col items-center">
-        <div className="w-4 h-4 bg-primary-500 rounded-full border-2 border-white shadow-sm"></div>
+        <div className="w-4 h-4 bg-primary rounded-full border-2 border-white shadow-sm"></div>
         {!isLast && <div className="w-px h-16 bg-border-default mt-2"></div>}
       </div>
       <div className="flex-1 pb-4">

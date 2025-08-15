@@ -19,9 +19,9 @@ export default function Footer() {
             </div>
             <div className="max-w-lg text-balance heading-3-responsive font-semibold font-heading">
               Let&apos;s work together to make complex{' '}
-              <span className="text-primary-500 italic">simple</span>
+              <span className="text-primary italic">simple</span>
             </div>
-            {/* <div className="flex justify-center items-center px-6 py-2 font-semibold text-white rounded-full border border-transparent w-fit h-fit bg-primary-500">
+            {/* <div className="flex justify-center items-center px-6 py-2 font-semibold text-white rounded-full border border-transparent w-fit h-fit bg-primary">
               Connect with me
             </div> */}
           </div>

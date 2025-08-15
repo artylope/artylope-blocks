@@ -96,11 +96,10 @@ export const LikeAndDislikeBlock = ({
       {tags.map((tag, index) => (
         <span
           key={index}
-          className={`px-2 py-1 rounded text-sm font-medium ${
-            isLike
+          className={`px-2 py-1 rounded text-sm font-medium ${isLike
               ? 'bg-success-50 text-success-700'
               : 'text-danger-700 bg-danger-50'
-          }`}>
+            }`}>
           {tag}
         </span>
       ))}
@@ -176,17 +175,15 @@ export const StoryBlock = ({
     <div className="flex flex-row gap-x-4">
       <div className="flex flex-col justify-center items-center">
         <div
-          className={` basis-[1rem] w-0.5 h-full bg-zinc-100 ${
-            position === 'start' ? 'invisible' : ''
-          }`}></div>
+          className={` basis-[1rem] w-0.5 h-full bg-zinc-100 ${position === 'start' ? 'invisible' : ''
+            }`}></div>
         <div className={`flex justify-center items-center w-3 h-3 basis-3`}>
           <div
-            className={`w-3 h-3 bg-white rounded-full border-2 border-primary-500`}></div>
+            className={`w-3 h-3 bg-white rounded-full border-2 border-primary`}></div>
         </div>
         <div
-          className={`grow w-0.5 h-full bg-zinc-100 ${
-            position === 'end' ? 'invisible' : ''
-          }`}></div>
+          className={`grow w-0.5 h-full bg-zinc-100 ${position === 'end' ? 'invisible' : ''
+            }`}></div>
       </div>
       <div className={`flex flex-col pt-2 pb-8 space-y-1`}>
         <span className="mb-1 content-default">{year}</span>

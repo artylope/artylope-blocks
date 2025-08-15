@@ -215,7 +215,7 @@ const TestimonialSection = () => {
                 key={index}
                 onClick={() => scrollTo(index)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${index === selectedIndex
-                  ? 'bg-primary-500 w-10'
+                  ? 'bg-primary0 w-10'
                   : 'bg-zinc-300 dark:bg-zinc-600 hover:bg-primary-400 dark:hover:bg-primary-400 w-6'
                   }`}
                 aria-label={`Go to testimonial ${index + 1}`}
